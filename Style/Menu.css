@@ -1,0 +1,54 @@
+.topheader                          {position:absolute; width:100%; padding:0px; margin:0; color:white; padding:10px 10px 0 10px; box-sizing: border-box;}
+.topheader nav                      {padding:10px; margin:0; }
+.topheader nav a                    {color: white;text-decoration: none;}
+.topheader nav ul                   {display:flex; justify-content:space-evenly; list-style-type: none;}
+.topheader .logoimage               {width:100px; }
+.topheader .ctabutton               {border:1px solid white; padding:2px 10px 2px 10px; width:auto; margin:-3px 0 0 0; transition: background-color 0.3s linear, color 0.3s linear; border-radius: 5px; text-align:center;}
+.topheader .ctabutton:hover         {background-color:white; color: #1A374D; cursor:pointer}        
+.topheadermobile                    {display:none;}
+
+.logo                               {padding: 0px 0px; width:100px;}
+.item                               {padding: 0px;}
+.itemgap                            {width:25%;}
+
+.stickyheader                       {z-index:10; position: fixed;top: 0;width: 100%; height:35px;  padding: 20px 0 5px 0;  color: black; box-shadow:0px 20px 20px 0px rgba(0, 0, 0, 0.15); -webkit-backdrop-filter: blur(10px) contrast(1) saturate(200%); backdrop-filter: saturate(200%) contrast(1) blur(10px); background-color: rgba(255, 255, 255, .8)}
+.stickyheader .logoimage            {width:50px; position:absolute; top:0px}
+.stickyheader nav                   {margin-right:20px}
+.stickyheader nav a                 {color: black;text-decoration: none;}
+.stickyheader nav ul                {display: flex; justify-content: space-evenly; list-style-type: none;}                    
+.stickyheader .ctabutton            {border:1px solid #1A374D; padding:2px 10px 2px 10px; width:auto; margin:-3px 0 0 0; transition: background-color 0.3s linear, color 0.3s linear; border-radius: 5px; text-align:center;}
+.stickyheader .ctabutton:hover      {background-color:#1A374D; color: white; cursor:pointer}        
+.stickyheadermobile                 {display:none;}
+
+/*#####################################################################*/
+/*# CSS Side Nav Bar for Mobile devices                               #*/
+/*#####################################################################*/        
+.sidenav                            {z-index:100; height:100%;width: 0;position: fixed;top: 0;left: 0;background-color:rgba(0,0,0,0.8); backdrop-filter:blur(8px);overflow-x: hidden;transition: 0.5s;padding-top: 60px;}
+.sidenav a                          {padding: 15px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}
+.sidenav a:hover                    {color: #f1f1f1;}
+.sidenav .menuicon                  {width:30px; margin:20px; position:absolute; top:0; right:0;}
+.sidenav .menuicondark              {width:30px; margin:20px; position:absolute; top:0; right:0;}
+.sidenav .closebtn                  {position: absolute;top: 0;right: 25px;font-size: 36px;margin-left: 50px;}
+
+/*#####################################################################*/
+/*# Mobile Styles (< 900 px screen width)                             #*/
+/*#####################################################################*/
+@media only screen and (max-width: 900px) 
+{
+.topheader                          {display:none;}
+.topheadermobile                    {display:flex; width:100%; flex-direction:row; justify-content: space-between; position:relative; z-index:1000;}
+.topheadermobile .logoimage         {width:50px; margin:10px;}
+.topheadermobile .menuicon          {width:30px; margin:20px;}
+.topheadermobile .menuicondark      {width:30px; margin:20px;}
+.topheadermobile .navitems          {padding:25px;}
+.topheadermobile a                  {color:white;}
+
+.stickyheader                       {display:none;}
+.stickyheadermobile                 {display:block; }
+.stickyheadermobile                 {z-index:20; position: fixed;top: 0;width: 100%; height:50px; padding: 10px; background-image:url('/images/WhiteBG_80pct.png'); color: black; opacity:1;}
+.stickyheadermobile .menuicon       {width:30px; position:absolute; top:0px; right:0; transform: translateY(20px) translateX(-40px);}
+.stickyheadermobile .menuicondark   {width:30px; position:absolute; top:0px; right:0; transform: translateY(20px) translateX(-40px);}
+.stickyheadermobile .logoimage      {width:50px; position:absolute; top:0px; left:0; transform: translateY(10px) translateX(10px);}
+.stickyheadermobile nav a           {color: black;text-decoration: none;}
+.stickyheadermobile nav ul          {display: flex; justify-content: space-evenly; list-style-type: none;}                            
+}

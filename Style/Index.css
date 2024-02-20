@@ -1,0 +1,113 @@
+/*########################*/
+/*# HERO PANEL           #*/
+/*########################*/
+.herocontainer{z-index:11; width:100%; height:500px; background-image:url('../Images/herobg.jpg'); background-attachment:fixed; background-position:right top; position:relative;}                   
+.heropanel {position:relative; top:200px;margin-left:10%; width:700px; min-height:400px;}
+.herolinks {position:absolute; bottom:0; left:0;right:0; color:#3B413C; padding:15px;}
+
+/*########################*/
+/*# FEATURES             #*/
+/*########################*/
+.features                           {margin:110px 0 50px 0; padding-top:70px;position:relative; background-color:white; }    
+.featurecontainer                   {display:flex; flex-direction: row; flex-wrap:wrap;justify-content:space-around; }
+.feature                            {width:300px; min-height:200px; margin: 20px;}
+.feature .icon                      {width:50px; padding:0px; margin:60px 0 70px 0; transition: transform 0.5s; opacity: 0.75;}
+.feature .icon:hover                {transform: scale(3);}
+.zoom                               {transform: scale(2);}
+
+/*########################*/
+/*# CALL TO ACTION       #*/
+/*########################*/
+.calltoaction                       {color:white; margin:0 0 20px 0; padding:40px 20px 40px 20px;background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/herobg.jpg'); background-attachment: fixed; background-size: auto; background-position: right top; background-repeat: no-repeat; }
+.calltoaction h2                    {font-size:30px; margin:20px 0 20px 0;}
+.calltoaction p                     {padding:20px}
+
+/*########################*/
+/*# PORTFOLIO            #*/
+/*########################*/
+.portfolio                          {margin:50px 5% 50px 5%; padding-top:70px;}
+.portfolio .row                     {display:flex; flex-direction: row; justify-content:center; align-items: center top; flex-wrap:nowrap; padding:50px;}
+.portfolio .picture                 {width:400px; }
+.portfolio .macscreen               {width:400px;}
+.portfolio .text                    {padding:0 30px 0 30px;}
+
+/*########################*/
+/*# TESTIMONIALS         #*/
+/*########################*/
+.testimonials                       {background-color: #1A374D; color:white; margin:50px 0 0 0; padding:80px 20px 10px 20px;background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../Images/testimonialsbg.jpg'); background-attachment: fixed; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.testimonials p                     {padding:0px; margin:20px 0 0 0;}
+.testimonials .footnote             {margin:20px 0 20px 0;}
+.testimonials h2                    {padding-bottom: 0px;}
+.testimonialcontainer               {padding-bottom:20px; border:0px red solid;display:flex; flex-direction: row; height:auto; justify-content:flex-start; align-items: flex-start; flex-wrap:nowrap; overflow:auto;}
+.testimonial                        {box-sizing: border-box; padding:20px; border:1px rgba(255, 255, 255, 0.2) solid; min-width:400px; height:auto; margin:20px; box-shadow:0px 20px 20px 0px rgba(0, 0, 0, 0.35); -webkit-backdrop-filter: blur(8px) contrast(1) saturate(100%); backdrop-filter: contrast(1) saturate(100%) blur(8px); background-color: rgba(180, 205, 230, 0.2)}
+
+/*########################*/
+/*# PRICES               #*/
+/*########################*/
+.prices                             {padding:70px 30px 50px 30px;}
+.prices h1                          {font-size:30px; color:#102230; margin:0 0 20px 0;}
+.prices h2                          {font-size:50px; margin:0 0 30px 0; display:inline;}
+.prices h3                          {font-size:20px; margin:20px 0 20px 0; font-weight:normal; color:#B1D0E0}
+.pricecontainer                     {display:flex; width:100%; flex-direction:row; justify-content:space-evenly; margin-top:0px; flex-wrap:wrap; }
+.price                              {color:white; width:250px; min-height:400px; background-color:#4f4f4f;margin:20px; text-align:left; padding:30px; box-shadow:0px 5px 20px 5px rgba(0, 0, 0, .25); display:flex; flex-direction: column; align-items:stretch; justify-content:space-between;}
+.price ul                           {list-style: none;}
+.price ul li:before                 {content: "\2714\0020";}
+.price .buttontranswhite            {display:block}
+
+
+/*########################*/
+/*# CONTACT US           #*/
+/*########################*/
+.contactus                          {min-height:200px; background-color:#f4f4f4; margin:20px 0 0px 0; padding:60px 0 20px 0;}        
+.contactus h1                       {font-size:30px; color:#102230; margin:0 0 20px 0;}        
+.contactuscontainer                 {display:flex; justify-content:center; align-items:center top; flex-direction: row; flex-wrap:wrap;}
+.contactuscontainer .form           {width:450px; min-height:300px; padding:20px 40px 20px 20px; text-align:left;}
+.contactuscontainer .info           {width:450px; min-height:300px; padding:20px; text-align:left;}
+.contactus input[Type="text"]       {width:100%; margin: 10px; padding:20px; box-sizing:border-box; font-size:20px;}
+.contactus input[Type="email"]      {width:100%; margin: 10px; padding:20px; box-sizing:border-box; font-size:20px;}
+.contactus input[Type="submit"]     {width:auto; margin: 10px; padding:10px 20px 10px 20px; box-sizing:border-box; font-size:16px; border:1px solid #1A374D; transition: background-color 0.3s linear, color 0.3s linear; border-radius: 5px;}
+.contactus input[Type="submit"]:hover{cursor:pointer}
+.contactus textarea                 {width:100%; min-height:200px; margin: 10px; padding:20px; box-sizing:border-box; font-size:20px; font-family:inherit}
+.contactus .icon                    {width:50px; padding:0px; margin:140px 0 70px 0; transition: transform 0.5s}
+.contactus .zoom                    {transform: scale(7);}        
+
+/*#####################################################################*/
+/*# Mobile Styles (Less than 900 px screen width)                     #*/
+/*#####################################################################*/
+@media only screen and (max-width: 900px) 
+{
+    /*########################*/
+    /*# HERO SECTION         #*/
+    /*########################*/
+    .heropanel                      {margin:0px 20px 20px 20px; padding-bottom:90px; width:auto; height:400px; box-sizing: border-box;top:0px;}
+
+    /*########################*/
+    /*# FEATURES             #*/
+    /*########################*/
+    .features                       {margin-top:0px; padding-top:50px;position:relative} 
+
+    /*########################*/
+    /*# PORTFOLIO            #*/
+    /*########################*/
+    .portfolio                      {margin:50px 0px 50px 0px; padding:20px 10px 0 10px}
+    .portfolio .row                 {padding:30px 0px 30px 0px;}
+    .portfolio .row.odd             {flex-direction:column-reverse; padding-right:0px;}
+    .portfolio .row.even            {flex-direction:column; padding-right:0px;}
+    .portfolio .picture             {width:auto;}
+    .portfolio .text                {text-align:center; padding:0 20px 0 20px}
+    .portfolio .macscreen           {width:70%}
+    
+    /*########################*/
+    /*# TESTIMONIALS         #*/
+    /*########################*/
+    .testimonials                   {margin:0; padding:50px 20px 50px 20px; background-size:auto;}
+
+    /*########################*/
+    /*# INPUT FIELDS         #*/
+    /*########################*/
+    /* iOS adds it's own look to text fields so override this to make them look the same across all devices */
+    textarea,
+    input[type="text"],
+    input[type="button"],
+    input[type="submit"]                {-webkit-appearance: none;border-radius: 0;}
+}

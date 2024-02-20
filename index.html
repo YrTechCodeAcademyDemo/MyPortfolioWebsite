@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- viewport employs same screen scaling for mobile devices as it does for desktops (i.e. doesn't shrink stuff when the screen gets small) -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Portfolio Website Project</title>
+    
+    <!-- General CSS files -->
+    <link rel="stylesheet" href="Style/Flipbox.css"> 
+    <link rel="stylesheet" href="Style/Footer.css">    
+    <link rel="stylesheet" href="Style/Index.css">    
+    <link rel="stylesheet" href="Style/Menu.css">            
+    <link rel="stylesheet" href="Style/UI.css">       
+    
+</head>
+<body>
+    <!--##########################-->
+    <!--# HERO SECTION           #-->
+    <!--##########################-->
+    <header>    
+        <div class="herocontainer">        
+            <!--##########################-->
+            <!--# TOP MENU               #-->
+            <!--##########################-->
+            <!-- Displayed for PC, MAC and large Tablets -->
+            <div class="topheader">
+                <nav>
+                    <ul class="menu">                    
+                        <li class="logo">
+                            <img class="logoimage" src="Images/Logo_White_500x500.png" />
+                        </li>
+                        <li class="itemgap"></li>
+                        <li class="item"><a href="#features">Products & Services</a></li>
+                        <li class="item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="item"><a href="#testimonial">Testimonials</a></li>
+                        <li class="item"><a href="#prices">Pricing</a></li>
+                        <li class="item"><a href="#contactus">Contact Us</a></li>                    
+                        <li class="item"><a href="http://instagram.com" target="_blank"><div class="ctabutton">Social</div></a></li>
+                    </ul>
+                </nav>                
+            </div>      
+            <!-- Displayed for Mobile Phones -->
+            <div class="topheadermobile">
+                <div class="logomobile">
+                    <img class="logoimage" src="Images/Logo_White_500x500.png" />
+                </div>
+                <div class="navmenutrigger">
+                    <img class="menuicon" src="Images/MenuIcon.png" onclick="mfOpenNav()"/>
+                </div>                         
+            </div>      
+
+            <!--##########################-->
+            <!--# HERO PANEL             #-->
+            <!--##########################-->
+            <!-- Hero panel with Call To Action-->        
+            <div class="heropanel">
+                <div class="flip-box" id="flip-box-1">
+                    <div class="flip-box-inner" id="flip-box-inner">
+                        <!-- ################### -->
+                        <!-- # Front Panel     # -->
+                        <!-- ################### -->        
+                        <div class="flip-box-front">
+                            <h1>Welcome!</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <div class="herolinks">
+                                <div class="buttontransblack" onclick="mfFlipToBack();">Learn more</div>
+                            </div>
+                        </div>
+                        <!-- ################### -->
+                        <!-- # Back Panel      # -->
+                        <!-- ################### -->        
+                        <div class="flip-box-back"> 
+                            <h1>more...</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="herolinks">
+                                <div class="buttontransblack" onclick="mfFlipToFront();">Back</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                      
+        </div>        
+
+        <!--##########################-->
+        <!--# STICKY HEADER          #-->
+        <!--##########################-->
+        <div>
+            <!-- Sticks at the top but hides behind hearo section so is only visible when hero section scrolls up and out of view -->
+            <!-- Sticky Header for PC, Mac and Large Tablet -->
+            <div class="stickyheader">
+                <nav>
+                    <ul class="menu">
+                        <li class="logo">
+                            <a href="#"><img class="logoimage" src="Images/Logo_Blue_100x100.png" /></a>
+                        </li>
+                        <li class="itemgap"></li>
+                        <li class="item"><a href="#features">Products & Services</a></li>
+                        <li class="item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="item"><a href="#testimonial">Testimonials</a></li>
+                        <li class="item"><a href="#prices">Pricing</a></li>
+                        <li class="item"><a href="#contactus">Contact Us</a></li>                
+                        <li class="item"><a href="http://instagram.com" target="_blank"><div class="ctabutton">Social</div></a></li>
+                    </ul>
+                </nav>                
+            </div>
+            <!-- Sticky Header for Mobile Phones -->
+            <div class="stickyheadermobile" id="StickyHeaderMobile" style="position:fixed; z-index:1;">
+                <div class="logomobile">
+                    <a href="#"><img class="logoimage" src="Images/Logo_Blue_100x100.png" /></a>
+                </div>
+                <div class="navmenutrigger">
+                    <img class="menuicondark" src="Images/MenuIconDark.png" onclick="mfOpenNav()"/>
+                </div>                         
+            </div>      
+        </div>    
+
+        <!--##########################-->
+        <!--# SIDE NAV MENU          #-->
+        <!--##########################-->
+        <div id="mySidenav" class="sidenav">
+            <img class="menuicon" src="Images/MenuCloseIcon.png" onclick="mfCloseNav()"/>
+            <a href="#features" onclick="mfCloseNav()">Products & Services</a>
+            <a href="#portfolio" onclick="mfCloseNav()">Portfolio</a>
+            <a href="#prices" onclick="mfCloseNav()">Pricing</a>
+            <a href="#contactus" onclick="mfCloseNav()">Contact Us</a>
+            <a href="#testimonial" onclick="mfCloseNav()">Testimonials</a>
+            <a href="http://instagram.com" target="_blank">Social</a>
+        </div>
+
+    </header>
+    
+    <!--##########################-->
+    <!--# FEATURES               #-->
+    <!--##########################-->
+    <div class="features" id="features">
+        <h2>Products & Services</h2>
+        <div class="featurecontainer">
+            <div class="feature">
+                <a href="#">
+                    <img class="icon" src="Images/Icon_WebDevelopment.png" id="icoWeb" />
+                </a>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">
+                    <div class="buttontransblack">Learn more</div>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="#">
+                    <img class="icon" src="Images/Icon_AppDevelopment.png" id="icoApp" />
+                </a>    
+                <h3>App Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">
+                    <div class="buttontransblack">Learn more</div>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="#">
+                    <img class="icon" src="Images/Icon_DomainRegistration.png" id="icoDomain" />
+                </a>
+                <h3>Domain Registration</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">
+                    <div class="buttontransblack">Learn more</div>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="#">
+                    <img class="icon" src="Images/Icon_TechSupport.png" id="icoSupport" />
+                </a>
+                <h3>Tech Support</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">
+                    <div class="buttontransblack">Learn more</div>
+                </a>
+            </div>
+        </div>
+    </div>   
+
+    <!--##########################-->
+    <!--# CALL TO ACTION         #-->
+    <!--##########################-->
+    <div class="calltoaction" id="calltoaction">
+        <h2>Lorem ipsum dolor sit amet...</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <a href="#">
+            <div class="buttontranswhite">Call To Action</div>
+        </a>        
+    </div>     
+
+    <!--##########################-->
+    <!--# PORTFOLIO              #-->
+    <!--##########################-->        
+    <div class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="row even">
+            <div class="picture">
+                <img class="macscreen" src="Images/WebsiteMockup1.png">
+            </div>
+            <div class="text">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="row odd">                
+            <div class="text">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="picture">
+                <img class="macscreen" src="Images/WebsiteMockup1.png">
+            </div>
+        </div>
+    </div>
+    
+    <!--##########################-->
+    <!--# TESTIMONIALS           #-->
+    <!--##########################-->   
+    <div class="testimonials" id="testimonial">
+        <h2>What our customers say...</h2>
+        <div class="testimonialcontainer">
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+            <div class="testimonial">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."                
+                </p>
+                <div class="footnote">1 Jan 2022 - Fred Bloggs, UK</div>  
+            </div>
+        </div>                      
+    </div>   
+
+    <!--##########################-->
+    <!--# PRICES                 #-->
+    <!--##########################-->   
+    <div class="prices" id="prices">
+        <h1>Pricing</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="pricecontainer">
+            <div class="price">
+                <div>
+                    <h2>$10</h2> /mo
+                    <h3>Lite</h3>
+                    <p></p>                    
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                    </ul>            
+                </div>        
+                <a href="mailto:hello@yourcompany.com?Subject=Pricing Info&Body=Please send me information on your Lite pricing package">
+                    <div class="buttontranswhite">More info</div>
+                </a>
+            </div>
+            <div class="price">
+                <div>
+                    <h2>$15</h2> /mo
+                    <h3>Bronze</h3>
+                    <p>Everything from <strong>Lite</strong> +</p>
+                    <ul>
+                        <li>Feature 5</li>
+                        <li>Feature 6</li>
+                        <li>Feature 7</li>
+                        <li>Feature 8</li>
+                    </ul>
+                </div>
+                <a href="mailto:hello@yourcompany.com?Subject=Pricing Info&Body=Please send me information on your Bronze pricing package">
+                    <div class="buttontranswhite">More info</div>
+                </a>
+            </div>
+            <div class="price">
+                <div>
+                    <h2>$20</h2> /mo
+                    <h3>Silver</h3>
+                    <p>Everything from <strong>Bronze</strong> +</p>
+                    <ul>                            
+                        <li>Feature 9</li>
+                        <li>Feature 10</li>
+                        <li>Feature 11</li>
+                        <li>Feature 12</li>
+                        <li>Feature 13</li>
+                        <li>Feature 14</li>
+                    </ul>
+                </div>
+                <a href="mailto:hello@yourcompany.com?Subject=Pricing Info&Body=Please send me information on your Silver pricing package">
+                    <div class="buttontranswhite">More info</div>
+                </a>
+            </div>
+            <div class="price">
+                <div>
+                    <h2>$25</h2> /mo
+                    <h3>Gold</h3>
+                    <p>Everything from <strong>Silver</strong> +</p>
+                    <ul>
+                        <li>Feature 15</li>
+                        <li>Feature 16</li>
+                        <li>Feature 17</li>
+                        <li>Feature 18</li>
+                        <li>Feature 19</li>
+                        <li>Feature 20</li>
+                        <li>Feature 21</li>
+                    </ul>
+                </div>
+                <a href="mailto:hello@yourcompany.com?Subject=Pricing Info&Body=Please send me information on your Gold pricing package">
+                    <div class="buttontranswhite">More info</div>
+                </a>
+            </div>                
+        </div>
+    </div>                    
+
+    <!--##########################-->
+    <!--# CONTACT US             #-->
+    <!--##########################-->   
+    <div class="contactus" id="contactus">
+        <div class="contactuscontainer">                        
+            <div class="info">
+                <h1>Contact us...</h1>
+                <p>
+                    To request information, ask questions about our products or services, or just say hello, please fill in the form and hit submit.
+                </p>
+                <center>
+                    <img src="Images/Hello.png" class="icon" id="icoHello" />
+                </center>
+            </div>
+            <div class="form">
+                <form name="ContactUs" action="https://yrtechforms.com/submit/?ContactUs&106153401" method="post" autocomplete="off">
+                    <input type="text" placeholder="Name" name="Name" required/>
+                    <input type="text" placeholder="Email" name="Email" required/>
+                    <textarea name="Message" placeholder="Message" required></textarea>    
+                    <input type="submit" value="Submit" />               
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--##########################-->
+    <!--# FOOTER                 #-->
+    <!--##########################-->   
+    <div class="footer">
+        <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">GDPR</a></li>
+        </ul>
+        <p>
+            &copy; Copyright {Year} {YourCompany}<br />
+            All rights reserved
+        </p>
+    </div>
+
+    <!--##########################-->
+    <!--# SCRIPT                 #-->
+    <!--##########################-->   
+    <script>      
+        
+        /* Code to control the Flip Panel */
+        function mfFlipToBack() {
+            document.getElementById('flip-box-inner').style.transform = 'rotateY(180deg)';            
+        }
+        function mfFlipToFront() {
+            document.getElementById('flip-box-inner').style.transform = '';            
+        }
+
+        /* Code to open and close the mobile navigation menu*/
+        function mfOpenNav() {                
+            document.getElementById("mySidenav").style.width = "100%";                
+        }
+        function mfCloseNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        /* Code to call the ZoomIcon function when an image scrolls into view */
+        var observer = new IntersectionObserver(entries => {                        
+            entries.forEach(entry => {                                        
+                if (entry.isIntersecting) {
+                    setTimeout("mfZoomIcon('" + entry.target.id + "');", 250);
+                }
+            });
+        });
+        function mfZoomIcon(pstrId){
+            document.getElementById(pstrId).classList.add('zoom');  
+        }
+
+        /* Setup observers to monitor images on this web page and trigger the above code when they scroll into view */
+        observer.observe(document.querySelector('#icoWeb'));
+        observer.observe(document.querySelector('#icoApp'));
+        observer.observe(document.querySelector('#icoDomain'));
+        observer.observe(document.querySelector('#icoSupport'));
+        observer.observe(document.querySelector('#icoHello'));
+
+        /* Make body fully opaque so that it fades into view as soon as page has loaded */
+        document.body.onload = function(){document.body.style.opacity='1'};
+
+    </script>   
+</body>
+</html>
